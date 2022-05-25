@@ -16,7 +16,7 @@ app.use('/tickets',ticketRouter);
 
 
 const pORT = process.env.PORT|| 5000;
-const uri = process.env.ATLAS_URI || "mongodb://localhost:27017/MEANTicket1";
+const uri = process.env.URI;
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(pORT, () => console.log(`Server Running on Port: http://localhost:${pORT}`)))
